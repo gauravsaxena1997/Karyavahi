@@ -1,0 +1,21 @@
+{% extends 'portal/base.html' %}
+{% block title %}  Analyze {% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<form method="GET" action="/postanalyze/">
+	{% csrf_token %}
+	  <div class="form-group row"  style="margin-top:35px ">
+
+            <label for="{{ input_hastag.q.id_for_label }}" style="font-family:130%;padding-right:30px">Input Hashtag: </label>
+            	{{ input_hastag.q }}
+
+	  </div>
+
+	  <button type="submit" class="btn btn-info btn-lg">Analyze</button>
+	</form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'portal/base.html' %}
+{% load staticfiles %}
+{% block title %}  Profile {% endblock %}
+
+{% block body %}
+
+<div class="row justify-content-center">
+	<div class="col-9">
+		<div class="card card-block shadow mt-5 p-4" style="border-radius: 20px;">
+			<div class="row">
+				<div class="col-4" style="background-image: url({% static 'img/hospital-background.jpg' %})">
+					<img src="{% static 'img/doctor.png' %}" class="img-user rounded img-thumbnail">
+				</div>
+				<div class="col-6 offset-1">
+					<p style="font-size: 160%"><b>Name:</b> {{ name }}</p>
+					<p style="font-size: 150%"><b>Email:</b> {{ email }} </p>	
+				</div>
+			</div><hr>
+				<p><b> Mobile :</b> {{ mobile }}  </p>
+				<p><b> Address:</b> {{ address }} </p><br>
+   	 		<a class="profile-edit btn btn-primary text-default" style="width: 15%" href="{% url 'home:update_profile' %}"> 
+   	 			Edit</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

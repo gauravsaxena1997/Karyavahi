@@ -1,0 +1,148 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <title>{% block title %} Karyavahi {% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home-styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portal-styles.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+          <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand mt-3">
+                    <a href="#">
+                       <h2> Karyavahi </h2>
+                    </a>
+                </li><hr color="white">
+                <div class="row container">
+                  <div class="col-4"><span class="fa fa-facebook-square fa-lg social-sidebar"></span></div>
+                  <div class="col-4"><span class="fa fa-twitter-square fa-lg social-sidebar"></span></div>
+                  <div class="col-4"><span class="fa fa-instagram fa-lg social-sidebar"></span></div>
+                </div><br><br>
+                <li>
+                    <a href="{% url 'home:hospital_portal' %}">Dashboard</a>
+                </li>
+                <li>
+                    <a href="{% url 'home:status' %}">Status</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+                <li>
+                    <a href="#">Analytics</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+                <br><br>
+                
+                <a href="#"><span class="btn btn-outline-primary p-2 ml-4">
+                  <span class="fa fa-arrow-down fa-lg"></span> Download our app</span></a>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+<div id="page-content-wrapper">
+
+<!-- top contact -->
+<div class="jumbotron jumbotron-contact m-0 p-2" style="border-radius: 0">
+  <div class="container">
+    <div class="row container" style="color: white">
+        <div class="col-5 offset-2">
+                Any questions on Karyavahi app or solution?
+        </div>
+        <div class="col-2">
+                <span class="fa fa-phone fa-lg"></span> 9876543210
+        </div>
+        <div class="col-3">
+            <span class="fa fa-envelope fa-lg"></span>
+            <a title="Email id" href="mailto:karyavahi@gmail.com" style="color: white"> teamkaryavahi@gmail.com </a>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- top contact -->
+<nav class="navbar navbar-expand-lg navbar-default bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home:home' %}" title="Swachh Bharat">
+        <img src="{% static 'img/logo.png' %}" alt="karyavahi" width="50px" height="100px" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav">
+          <li class="dropdown nav-item">
+              <div class="btn dropdown-toggle" data-toggle="dropdown">
+                <img src="{% static 'img/doctor.png' %}" width="50px" height="50px"" class="img-fluid img-thumbnail">
+                Username
+              </div>
+            <div class="dropdown-menu">
+              <a class="dropdown-item " href="{% url 'home:profile' %}"><span class="fa fa-user-circle"></span> Profile</a>
+              <a class="dropdown-item " href="{% url 'home:signup' %}"><span class="fa fa-plus"></span> Add user</a>
+              <a class="dropdown-item " href="{% url 'home:logout' %}"><span class="fa fa-sign-out"></span> Logout</a>
+              <a class="dropdown-item " href="#"><span class="fa fa-cog"></span> Settings</a>
+            </div>
+          </li>
+          <li class="nav-item pl-5">
+            <a class="nav-link" href="#menu-toggle" id="menu-toggle">
+              <div class="btn btn-outline-primary"><span class="fa fa-bars fa-lg"></span></div></a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+<!-- Vedio Overlay -->
+<div class="video-overlay"></div>
+<video id="myVideo" autoplay muted loop>
+    <source src="{% static 'video/background2.mp4'  %}" type="video/mp4" />
+</video>
+<!-- End Video Overlay -->
+
+{% block body %}
+
+{% endblock %}
+</div>
+</div>
+
+
+
+
+
+
+    <script>
+// Menu Toggle Script
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+{% extends 'home/base.html' %}
+{% block home %} active {% endblock %}
+{% load staticfiles %}
+
+{% block body %}
+
+<div class="jumbotron jumbotron-top" style="background: black url({% static 'img/india-bg.jpg' %}) no-repeat fixed;" >
+    <div class="row">
+        <div class="col-5 offset-7 top-text">
+            <center>
+            <h1 style="color: orange">Welcome to Karyavahi</h1><br><br>
+            <h2 style="color: white;font-size: 135%">For the betterment of India</h2><br><br>
+            <div style="font-family: sans-serif;color: white">
+               <a class="btn btn-success p-2" href="#about">Know More</a>
+            </div>
+            </center>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+
+    <div class="row about" id="about">
+        <h3 class="col-12 text-center">About Karyavahi</h3>
+            <div class="col-7 align-self-center about-left">
+                <p class="about-text">
+                    •   Monitoring the situation of any problem by media, public and departments simultaneously. <br>
+                    •   Magnifying the real social issues.<br>
+                    •   Proper identity hiding of the person who is providing the news among public.<br>
+                    •   Suggestions by the public and the public leaders on any social issue.<br>
+                    •   Proper information of the government’s action over the situation.<br>
+                    •   No fake news because everything is live recorded by the public for the public.<br>
+                    •   Quick actions over the situation because all the information is going through media and public.<br>
+
+                </p>
+            </div>
+            <div class="col-5 align-self-center about-right" style="background: url({% static 'img/slider1.jpg' %}) no-repeat;">
+                <p style="text-align: center;bottom: 5px;position: relative;"><b>
+                    <br><br><br><br><br><br><br><br><br>
+                </b></p>
+            </div>
+    </div><br><br>
+
+<section id="benefits">
+    <div class="wrapper">
+        <h2 class="header-1 text-center">Benefits to Citizens</h2>
+        <p class="header-2 text-center">A transparent and accountable system of grievance redressal</p>
+        <ul class="bx-slider">
+            <li class="slide">
+                <i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/01.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2 text-capitalize">Simplicity &amp; ease of reporting
+                    </h4>
+                    <p>
+                        Citizens only need to take a picture of the civic-related complaint and post it through their Swachhata app.
+                    </p>
+                </div>
+            </li>
+            <li class="slide"><i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/02.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2">Locate the complaint with ease
+                    </h4>
+                    <p>
+                        The app can pinpoint the location of the complaint with accuracy using the geo-location of the picture, which will lead to faster resolution of the complaint.
+                    </p>
+                </div>
+            </li>
+            <li class="slide"><i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/03.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2">Regular complaint status updates
+                    </h4>
+                    <p>
+                        Citizens will get regular updates on the status of the complaint in the form of a push notification.
+                    </p>
+                </div>
+            </li>
+            <li class="slide"><i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/04.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2">Push notification when resolved
+                    </h4>
+                    <p>
+                        Citizens will get a push notification with the 'Resolved' image uploaded by the sanitary inspector or engineer when they change the status to Resolved.
+                    </p>
+                </div>
+            </li>
+            <li class="slide"><i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/05.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2">Reopen unresolved complaint
+                    </h4>
+                    <p>
+                        Citizens can reopen the complaint if they are not satisfied with the resolution.
+                    </p>
+                </div>
+            </li>
+            <li class="slide"><i class="thumbnail" style="background-image:url({% static 'img/landing/thumbnails/06.png' %});"></i>
+                <div class="content">
+                    <h4 class="header-2">Provide feedback on complaints
+                    </h4>
+                    <p>
+                        As complaints get resolved, citizens can provide feedback on the quality of the resolution.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<hr>
+<section id="service">
+    <h2 class="header-1 text-center">Service Level Agreements</h2>
+    <div class="wrapper">
+        <p class="header-2 text-center" style="margin-bottom:20px;">
+            Swachhata app aims to foster large scale citizen participation.
+        </p>
+        
+        <p class="header-2 text-center" style="font-size:14px;">
+            The Swachhata city rating system works on the number of complaints resolved by the corporation - with adherence to Service Level Agreements and to the satisfaction of the complainant. Action on the complaints may vary depending on the categories. Action for most complaints will be initiated from 6 hours of registration. There is a detailed escalation process built in the mobile application so that complaints that are not resolved at the lower level are moved to higher levels for action and resolution.
+        </p>
+        
+        <ul class="row services">
+            <li class="col-md-4 text-center">
+                <a href="#" title="Dead animals">
+                    <img src="{% static 'img/landing/service/dead-animals.png' %}" alt="dead animals" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">dead animals</h4>
+                        <h2 class="total-hrs">48 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            <li class="col-md-4 text-center">
+                <a href="#" title="Dustbins not cleaned">
+                    <img src="{% static 'img/landing/service/dustbins-not-cleaned.png' %}" alt="dustbins not cleaned" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">dustbins not cleaned</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            <li class="col-md-4 text-center">
+                <a href="#" title="Garbage dumps">
+                    <img src="{% static 'img/landing/service/garbage-dumps.png' %}" alt="garbage dumps" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">garbage dumps</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="Public toilets blockage">
+                    <img src="{% static 'img/landing/service/public-toilets-blockage.png' %}" alt="public toilets blockage" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">public toilets blockage</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="Garbage vehicle not arrived">
+                    <img src="{% static 'img/landing/service/garbage-vehicle-not-arrived.png' %}" alt="garbage vehicle not arrived" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">garbage vehicle not arrived</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="Sweeping not done">
+                    <img src="{% static 'img/landing/service/sweeping-not-done.png' %}" alt="sweeping not done" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">sweeping not done</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="No electricity in public toilets">
+                    <img src="{% static 'img/landing/service/no-electricity-in-public-toilets.png' %}" alt="no electricity in public toilets" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">no electricity in public toilets</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="No water supply in public toilets">
+                    <img src="{% static 'img/landing/service/no-water-supply-in-public-toilets.png' %}" alt="no water supply in public toilets" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">no water supply in public toilets</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="col-md-4 text-center">
+                <a href="#" title="Toilets not cleaned">
+                    <img src="{% static 'img/landing/service/toilets-not-cleaned.png' %}" alt="toilets not cleaned" />
+                    <div class="hover-effect">
+                        <em class="sla-time">SLA TIME</em>
+                        <h4 class="category">toilets not cleaned</h4>
+                        <h2 class="total-hrs">12 hrs</h2>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div class="text-center">
+            <a href="analytics.html" class="btn btn-lg btn-primary btn-trans text-uppercase">VIEW SWACHH CITY ANALYTICS</a>
+        </div>
+    </div>
+</section>
+<br><br>
+<!-- <section id="mobileApp" class=" bg-dark">
+    <div class="container">
+        <h2 class="text-center">The Citizen Apps</h2>
+        <div class="media">
+            <div class="media-left">
+                <figure>
+                    <img src="{% static 'img/landing/iphone.png' %}" alt="Mobile App" />
+                </figure>
+            </div>
+            <div class="media-body">
+                <p class="header-2 alt-color text-right">
+                    Citizens can download the mobile application and use it to file complaints. The citizens only need to take a picture of the complaint they see on the ground and post it through the Swachhata app.
+                </p>
+                <p class="header-2 alt-color text-right">
+                    The app can pinpoint the location of the complaint using the geo-location of the picture. It would automatically get forwarded to the municipal corporation for action.
+                </p>
+                <p class="header-2 alt-color text-right">
+                    Citizens get regular updates and notifications on the status of their complaint.
+                </p>
+                <p class="header-2 alt-color text-right">
+                    Citizens can send comments, feedback, reply to status messages and give final comments after verifying whether the complaint has been resolved on the ground.
+                </p>
+                <p class="header-2 alt-color text-right">
+                    Users can also vote up on complaints in their locality or complaints uploaded by friends and neighbours.
+                </p>
+                
+                <div class="clearfix app-buttons">
+                    <div class="pull-right">
+                        <a title="Google Play" href="https://play.google.com/store/apps/details?id=com.ichangemycity.swachhbharat&amp;hl=en" target="_blank">
+                            <img src="{% static 'img/landing/playstore.png' %}" alt="Google Play">
+                        </a>
+                    </div>
+                    <div class="pull-right">
+                        <a title="Apple Store" href="https://itunes.apple.com/us/app/id1124033628?ls=1&amp;mt=8" target="_blank">
+                            <img src="{% static 'img/landing/applestore.png' %}" alt="Apple Store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+    {{ work }}
+    {{ lis_time }}
+<footer class="footer p-5 bg-primary">
+    <div class="container">
+        <div class="row ">             
+            <div class="col-5 offset-1 col-sm-2">
+                <h5>Links</h5><hr>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./aboutus.html">About</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="./contactus.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-sm-5">
+                <h5>Our Address</h5><hr>
+                <address class="address">
+                  JECRC Foundation<br>
+                  Sitapura Insdustrial Area, Jaipur<br>
+                  RAJASTHAN<br>
+                  <i class="fa fa-phone fa-lg"></i>: +8561920884 <br>
+                  <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                  <i class="fa fa-envelope fa-lg"></i>: 
+                  <a href="mailto:teamkaryavahi@gmail.com" class="text-secondary">teamkaryavahi@gmail.com</a>
+
+               </address>
+            </div>
+
+            <div class="col col-sm-4 align-self-center">
+                <div style="text-align:center">
+                    <a class="btn bt-success btn-lg btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                    <a class="btn btn-lg btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-lg btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                    <a class="btn btn-lg btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    <a class="btn btn-lg btn-social-icon" href="mailto:gurvsxen143@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                </div>
+            </div>
+       </div>
+
+       <div class="row justify-content-center">             
+            <div class="col-auto">
+                <p>This website is for demo purposes only.</p>
+            </div>
+       </div>
+    </div>
+</footer>
+
+
+<!-- End Main -->
+</div>
+
+{% endblock %}
+
+
+
+
+

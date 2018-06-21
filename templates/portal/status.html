@@ -1,0 +1,65 @@
+{% extends 'portal/base.html' %}
+{% block title %}  Status {% endblock %}
+
+{% block body %}
+<!-- Tabs -->
+
+<div class="contianer">
+	<div class="row">
+		<div class="col-4 txt-danger"><a href="">New Cases</a></div>
+		<div class="col-4 txt-info"><a href="">Active Cases</a></div>
+		<div class="col-4 txt-success"><a href="">Complete Cases</a></div>
+	</div>
+</div>
+<!-- 
+
+<section id="tabs">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<nav>
+					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist" style="font-weight: bold;">
+						<a class="nav-item nav-link text-primary active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home " aria-selected="true">Active Cases</a>
+						<a class="nav-item nav-link text-danger" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Unactive Cases</a>
+						<a class="nav-item nav-link text-success" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Completed</a>
+					</div>
+				</nav>
+				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+
+					</div>
+					<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+ -->
+<br><br>
+{% for Id,ImageUrl,Title,Location,Description in post_details_lis %}
+	<div class="row justify-content-center">
+		<div class="col-10">
+			<div class="card" style="max-height: 350px;min-width: 850px;border-radius: 10px">
+				<div class="card-block">
+					<div class="row">
+						<div class="col-6">
+							<div style="width: 100%;max-height: 350px">
+								<center><img src="{{ImageUrl}}" class="img-fluid" style="min-height: 350px;display: block;"></center>
+							 </div>
+						</div>
+						<div class="col-6 p-2" style="text-align: ">
+							<h2 style="color: black">Case ID: kar-{{Id}}</h2><hr>
+							<h5 style="color: blue">
+								{{Title}}
+							</h5>
+							<p style="color: #001966">{{Location}}</p>
+							<p style="color: black"> {{Description}} </p>
+							<div class="btn btn-success"><a style="color: white" href="">Take Action</a></div>
+							<div class="btn btn-primary"><a style="color: white" href="{% url 'home:twitter' %}">Post</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div><br>
+{% endfor %}
+
+
+
+{% endblock %}

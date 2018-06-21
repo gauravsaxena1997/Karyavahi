@@ -1,0 +1,51 @@
+{% extends 'portal/base.html' %}
+{% block title %}  Status {% endblock %}
+
+{% block body %}
+<!-- Tabs -->
+
+<div class="container">
+	<div class="row" style="margin:5px;padding:10px">
+		<div class="col-4 " style="border-bottom:2px solid red">
+		<center><a class="text-center text-danger font-weight-bold" style="font-size:130%" href="{% url 'home:status' %}">New Cases</a>
+		</center></div>
+		<div class="col-4 ">
+		<center><a class="text-center text-info font-weight-bold" style="font-size:130%" href="{% url 'home:active_cases' %}">Active Cases</a></center></div>
+		<div class="col-4 ">
+		<center><a class="text-center text-success font-weight-bold" style="font-size:130%" href="{% url 'home:complete_cases' %}">Complete Cases</a></center></div>
+	</div>
+</div>
+
+{% for Id,ImageUrl,Title,Location,Description in post_details_lis %}
+
+	<div class="row justify-content-center">
+		<div class="col-10">
+			<div class="card" style="max-height: 350px;min-width: 850px;border-radius: 10px">
+				<div class="card-block">
+					<div class="row">
+						<div class="col-6">
+							<div style="width: 100%;max-height: 350px">
+								<center><img src="{{ImageUrl}}" class="img-fluid" style="min-height: 350px;display: block;"></center>
+							 </div>
+						</div>
+						<div class="col-6 p-2" style="text-align: ">
+							<h2 style="color: black">Case ID: kar-{{Id}}</h2><hr>
+							<h5 style="color: blue">
+								{{Title}}
+							</h5>
+							<p style="color: #001966">{{Location}}</p>
+							<p style="color: black"> {{Description}} </p>
+							<div class="btn btn-success"><a style="color: white" href="{% url 'home:take_action' %}">Take Action</a></div>
+							<div class="btn btn-primary"><a style="color: white" href="{% url 'home:twitter' %}">Post</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div><br>
+
+{% endfor %}
+
+
+
+{% endblock %}

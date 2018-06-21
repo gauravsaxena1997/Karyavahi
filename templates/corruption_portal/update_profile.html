@@ -1,0 +1,42 @@
+{% extends 'portal/base.html' %}
+{% load staticfiles %}
+{% block title %} Edit Profile {% endblock %}
+
+{% block body %}
+
+<div class="profile-page">
+	<div class="profile-image">
+		<center> <img src="{% static 'img/doctor.png' %}" class="img-user img-thumbnail"> </center>
+	</div>
+
+	<div class="container mt-5 row">
+		<div class="col-3"></div>
+		<div class="col-9">
+      <form method="POST" action="/post_update/">
+      {% csrf_token %}
+          <div class="form-group row">
+            <div class="col-2">
+              <label for="mobile" class="control-label">Mobile No.</label>
+             </div>
+             <div class="col-10">
+              <input type="text" class="form-control" id="mobile" name="mobile">
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group row">
+          	<div class="col-2">
+              <label for="address" class="control-label">Address</label>
+            </div>
+            <div class="col-10">
+              <input type="text" class="form-control" id="address" name="address">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success offset-2">Update</button>
+      </form>
+         </div>
+	</div>
+
+
+</div>
+
+{% endblock %}

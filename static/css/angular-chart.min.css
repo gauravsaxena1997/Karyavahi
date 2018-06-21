@@ -1,0 +1,93 @@
+.chart-legend, .bar-legend, 
+.line-legend, .pie-legend, 
+.radar-legend, .polararea-legend, 
+.doughnut-legend {
+	list-style-type:none;
+	margin-top:5px;
+	text-align:center;
+	-webkit-padding-start:0;
+	-moz-padding-start:0;
+	padding-left:0
+}
+.chart-legend li, .bar-legend li, 
+.line-legend li, .pie-legend li, 
+.radar-legend li, .polararea-legend li, 
+.doughnut-legend li {
+	display:inline-block;
+	white-space:nowrap;
+	position:relative;
+	margin-bottom:10px;
+	border-radius:5px;
+	padding:2px 38px 2px 20px;
+	font-size:12px;
+	cursor:default;
+	text-transform: uppercase;
+}
+.chart-legend li span, .bar-legend li span, 
+.line-legend li span, .pie-legend li span, 
+.radar-legend li span, .polararea-legend li span, 
+.doughnut-legend li span {
+	display:block;
+	position:absolute;
+	left:0;
+	top:3px;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+}
+.doughnut-legend li {
+	display: block;
+    padding-left: 20px;
+	padding-right: 20px;
+    text-align: left;
+}
+.doughnut-legend li span {
+	top: 4px;
+}
+
+ul.doughnut-legend {
+    margin-top: 26px;
+}
+
+.donut-container {
+	margin: 30px 0 21px;
+	position: relative;
+}
+
+ul.doughnut-legend li .count {
+    font-size: 20px;
+    display: inline-block;
+    padding-right: 3px;
+} 
+
+.donut-container .total-complaints {
+    position: absolute;
+    width: 130px;
+    color: #fff;
+    top: 85px;
+    left: 68px;
+}
+
+.total-complaints .total-count {
+    font-size: 22px;
+    line-height: 34px;
+}
+
+.total-complaints .total-text {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+	.doughnut-legend li span {
+		top: 3px;
+	}
+	
+	.donut-container .total-complaints {
+		width: auto;
+		top: 50%;
+		left: 50%;
+		margin-top: -74px;
+		margin-left: -35px;
+	}
+}

@@ -1,0 +1,163 @@
+body{
+  max-width: 100%
+}
+
+/*Vedio overlay*/
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+    z-index: -100;
+    opacity: 0.6;
+}
+
+.video-overlay {
+    position: fixed;
+    bottom: 0;
+    background: rgba(127, 153, 152, 0.4117647058823529);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.navbar{
+    opacity: 0.9;
+    padding: 0;
+    margin: 0;
+}
+
+
+#wrapper {
+  padding-left: 0;
+  transition: all 0.9s ease;
+}
+
+#sidebar-wrapper {
+  z-index: 2000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  box-shadow: 0px 5px 15px 1px blue;
+  width: 250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  border-left: 5px solid #2233FF;
+  transform: translateX(20px);
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+
+.jumbotron-contact{
+    background-color: black;
+}
+
+.jumbotron-top{
+    max-height: 400px;
+    top: 10px;
+}
+
+.top-text{
+    font-family: 'Pacifico', cursive;
+}
+
+.main{
+    position: relative;
+}
+
+/*About div*/
+.about{
+        width: 100%;
+}
+.about-left{
+    position: relative;
+    padding: 20px 50px 20px 20px;
+    border-left: 15px solid blue;
+    left: 25px;
+    min-height: 400px;
+    background-color: #377AFF;
+}
+.about-right{ 
+    padding-top: 200px;
+    color: white;
+    min-height: 340px;
+    position: relative;
+    right: 30px;
+    background-color: linen;
+    z-index: 1;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+.about-text{
+    font-size: 130%;
+    color: black;
+}
+
+.btn-social-icon{
+    color: black
+}
+.footer-links a{
+    color: white
+}

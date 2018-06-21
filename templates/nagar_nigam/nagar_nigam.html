@@ -1,0 +1,70 @@
+{% extends 'portal/base.html' %}
+{% block title %}  Nagar Nigam Portal {% endblock %}
+
+{% block body %}
+
+<div class="row">
+	<div class="bg-action"></div>
+	<div class="col-3 action-row">
+		<div class="action-heading">
+			Total Cases
+		</div>
+		<div class="action-content">
+			105
+		</div>
+	</div><div class="col-3 action-row">
+		<div class="action-heading">
+			Running Cases 
+		</div>
+		<div class="action-content">
+			40
+		</div>
+	</div>
+	<div class="col-3 action-row">
+		<div class="action-heading">
+			Unsolved Cases
+		</div>
+		<div class="action-content">
+			55
+		</div>
+	</div>
+	<div class="col-3 action-row">
+		<div class="action-heading">
+			Complete Cases
+		</div>
+		<div class="action-content">
+			10
+		</div>
+	</div>
+</div>
+<br><br>
+{% for counter_lis,ImageUrl,Title,Location,Description in post_details_lis %}
+	<div class="row justify-content-center">
+		<div class="col-10">
+			<div class="card" style="max-height: 350px;min-width: 850px;border-radius: 10px">
+				<div class="card-block">
+					<div class="row">
+						<div class="col-6">
+							<div style="width: 100%;
+							background:#A8E3FF;max-height: 350px">
+								<center><img src="{{ImageUrl}}" class="img-fluid" style="min-height: 350px;display: block;"></center>
+							 </div>
+						</div>
+						<div class="col-6 p-2" style="text-align: ">
+							<h2 style="color: black">Case:{{counter_lis}}</h2><hr>
+							<h5 style="color: blue">
+								{{Title}}
+							</h5>
+							<p style="color: #001966">{{Location}}</p>
+							<p style="color: black"> {{Description}} </p>
+							<div class="btn btn-success"><a style="color: white" href="">View Action</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div><br>
+{% endfor %}
+<h4 class="mt-3" style="text-align: center;font-size: 160%;color: #ECECEC">Statistics</h4>
+
+{% endblock %}
